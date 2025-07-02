@@ -2,7 +2,7 @@ export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-black text-white py-20">
       <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold pb-5 mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Privacy Policy
         </h1>
 

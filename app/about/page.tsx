@@ -62,7 +62,7 @@ export default function AboutPage() {
                 <div className="prose prose-lg max-w-none">
                   <p className="text-lg leading-relaxed text-gray-200 mb-6 text-justify">
                     <span className="font-bold">
-                      Kanksha D'Kate is Asia's First Generation Atelier of
+                      Kanksha D'Kate <span style = {{fontWeight: 'normal'}}>is</span> Asia's First Generation Atelier of
                       Personal Evolution Powered by Neuroscience
                     </span>
                     , and stands among the early pioneers in the global field of
@@ -102,11 +102,11 @@ export default function AboutPage() {
                 trajectories, her mastery is further cultivated through
                 signature programs and practices alongside formal
                 certifications. Formally accredited by the originators
-                themselves, Kanksha is also a Classic Code and New Code NLP
+                themselves, <span style = {{ fontStyle: 'italic' }}>Kanksha is also a Classic Code and New Code NLP
                 Practitioner, taught and Certified by the Co-creators -{" "}
-                <span className="font-bold">Dr. John Grinder</span>,{" "}
-                <span className="font-bold">Carmen Bostic St Clair</span> and
-                Michael Carroll.
+                Dr. John Grinder,{" "}
+                Carmen Bostic St Clair and
+                Michael Carroll.</span>
               </p>
 
               <p className="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
@@ -126,7 +126,7 @@ export default function AboutPage() {
                   href="/personal-story#qit-section"
                   className="text-stone-300 hover:text-white transition-colors underline font-bold"
                 >
-                  Quanta Installation Technology (QIT)
+                  Quanta Integration Science (QIS)
                 </Link>
                 . The{" "}
                 <span className="font-bold">
@@ -155,18 +155,17 @@ export default function AboutPage() {
               INTELLIGENCE which is driven by an evolved internal world. It's
               the kind of intelligence that emerges through inner calibration at
               the deeper levels of the{" "}
-              <span className="font-bold underline">mind-body matrix</span>.
+              <span className="font-bold italic underline">mind-body matrix</span>.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
-              We're living in an era where neuroscience is no longer just
+              It's an era where neuroscience is no longer just
               research or theory. It has found its ground in real life and is on
               the verge of revolutionizing every sphere it touches - education,
               sports, media, entertainment, business, healthcare, technology,
               leadership, and even governance. It is the frontier where human
               potential will be amplified like never before activating
-              unprecedented levels of performance and transformation. It will be
-              an era driven by the EVOLVED ONES.
+              unprecedented levels of performance and transformation, driven by the EVOLVED ONES.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
@@ -319,7 +318,7 @@ export default function AboutPage() {
             {/* CTA */}
             <div className="text-center mt-16 px-4 py-8 glass-dark rounded-lg border border-stone-500/20">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-white">
-                Ready to Begin Your Evolution?
+                Ready to Evolve?
               </h3>
 
               <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 max-w-xl mx-auto">
@@ -329,7 +328,7 @@ export default function AboutPage() {
 
               <div className="w-full flex justify-center">
                 <div className="w-full max-w-xs sm:max-w-md md:max-w-lg">
-                  <Link href="/services">
+                  <Link href="/programs">
                     <Button className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto px-4 sm:px-6 md:px-8 py-3 sm:py-3.5 text-sm sm:text-base md:text-lg font-semibold text-white text-center bg-gradient-to-r from-stone-600 to-stone-700 hover:from-stone-700 hover:to-stone-800 rounded-full transition-all duration-300 leading-snug whitespace-normal break-words">
                       Explore Our Transformation Experiences
                     </Button>

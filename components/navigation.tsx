@@ -39,7 +39,7 @@ export default function Navigation(): JSX.Element {
             {[
               { href: "/", label: "HOME" },
               { href: "/about", label: "ABOUT" },
-              { href: "/services", label: "SERVICES" },
+              { href: "/programs", label: "PROGRAMS" },
               { href: "/voice-of-kanksha", label: "VOICE OF KANKSHA" },
             ].map((item) => (
               <Link
@@ -111,7 +111,7 @@ export default function Navigation(): JSX.Element {
           {[
             { href: "/", label: "HOME" },
             { href: "/about", label: "ABOUT" },
-            { href: "/services", label: "SERVICES" },
+            { href: "/programs", label: "PROGRAMS" },
             { href: "/voice-of-kanksha", label: "VOICE OF KANKSHA" },
             { href: "/feedback", label: "WHISPERS OF CHANGE" },
             { href: "/events", label: "EVENTS" },

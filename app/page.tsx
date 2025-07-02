@@ -28,28 +28,38 @@ export default function HomePage() {
         {/* Hero Content - Simplified */}
         <div
           ref={heroRef}
-          className="relative z-10 text-center spacing-responsive-md scroll-reveal max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8"
+          className="relative z-10 text-left spacing-responsive-md scroll-reveal max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8"
         >
           {/* Main Heading Only */}
-          <div className="spacing-responsive-lg">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-shimmer animate-gradient-shift leading-tight px-2 mb-12 sm:mb-16">
-              UNLOCK YOUR INFINITE POTENTIAL
+          <div className="spacing-responsive-lg text-center">
+            <h1 className="text-lg sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-shimmer animate-gradient-shift leading-tight px-2 mb-12 sm:mb-16">
+              POSITIVELY INFLUENCE YOUR WORLD
             </h1>
+
+            <p className="text-base center italic">
+              Experience Success on Steroids Where You Make Things Happen!
+            </p>
           </div>
+          
 
           {/* CTA Button */}
-          
-          <div className="w-full flex justify-center px-4">
-  <Button className=" bg-[#B2A27A] hover:bg-[#9d8c5e] text-white font-bold text-[clamp(12px,3.5vw,18px)] px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 rounded-full w-full sm:w-auto max-w-full text-center whitespace-normal transition-colors duration-300"asChild>
-    <Link href="/contact"className="flex flex-col sm:flex-row items-center justify-centergap-2 sm:gap-3 w-full">
-      <span className="text-center break-words w-full">
-        EXPERIENCE A BREAKTHROUGH
-      </span>
-      <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-    </Link>
-  </Button>
-</div>
 
+          <div className="w-full flex justify-center px-4">
+            <Button
+              className=" bg-[#B2A27A] hover:bg-[#9d8c5e] text-white font-bold text-[clamp(12px,3.5vw,18px)] px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 rounded-full w-full sm:w-auto max-w-full text-center whitespace-normal transition-colors duration-300"
+              asChild
+            >
+              <Link
+                href="/contact"
+                className="flex flex-col sm:flex-row items-center justify-centergap-2 sm:gap-3 w-full"
+              >
+                <span className="text-center break-words w-full">
+                  EXPERIENCE A BREAKTHROUGH
+                </span>
+                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -94,7 +104,7 @@ export default function HomePage() {
             </Link>
 
             {/* Services Tile */}
-            <Link href="/services" className="group">
+            <Link href="/programs" className="group">
               <AnimatedCard
                 animation="slide-up"
                 delay={200}
