@@ -5,7 +5,7 @@ export default function BrandLogo() {
   return (
     <Link href="/" className="flex items-center">
       <Image
-        src="/images/logo.png"
+        src="/images/logo1.png"
         alt="KANKSHA D'KATE"
         width={320}
         height={120}

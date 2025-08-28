@@ -66,7 +66,7 @@ export default function Navigation(): JSX.Element {
               { href: "/feedback", label: "WHISPERS OF CHANGE" },
               { href: "/events", label: "EVENTS" },
               { href: "/credibility", label: "RESEARCH" },
-              { href: "/blogs", label: "BLOGS" },
+              { href: "/articles", label: "ARTICLES" },
               { href: "/contact", label: "CONTACT" },
             ].map((item) => (
               <Link
@@ -116,7 +116,7 @@ export default function Navigation(): JSX.Element {
             { href: "/feedback", label: "WHISPERS OF CHANGE" },
             { href: "/events", label: "EVENTS" },
             { href: "/credibility", label: "RESEARCH" },
-            { href: "/blogs", label: "BLOGS" },
+            { href: "/articles", label: "ARTICLES" },
             { href: "/contact", label: "CONTACT" },
           ].map((item, index) => (
             <Link

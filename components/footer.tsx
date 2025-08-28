@@ -2,6 +2,14 @@
 
 import Link from "next/link";
 import { BrandLogo } from "./brand-logo";
+import {
+  FaInstagram,
+  FaWhatsapp,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
+import { SiThreads } from "react-icons/si"; 
+import { FaXTwitter } from "react-icons/fa6"; 
 
 export default function Footer() {
   return (
@@ -12,8 +20,9 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <BrandLogo />
             <p className="text-gray-400 mt-4 max-w-md">
-              Transforming human potential through the intersection of
-              neuroscience and personal evolution.
+              Activating latent abilities of the human mind through
+              integration of neuroscience and precision-driven personal
+              evolution.
             </p>
           </div>
 
@@ -21,101 +30,42 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/programs"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Programs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/voice-of-kanksha"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Voice of Kanksha
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/story"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Story
-                </Link>
-              </li>
+              <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
+              <li><Link href="/programs" className="text-gray-400 hover:text-white transition-colors">Programs</Link></li>
+              <li><Link href="/voice-of-kanksha" className="text-gray-400 hover:text-white transition-colors">Voice of Kanksha</Link></li>
+              <li><Link href="/feedback" className="text-gray-400 hover:text-white transition-colors">Whispers of Change</Link></li>
+              <li><Link href="/programs#FAQs" className="text-gray-400 hover:text-white transition-colors">FAQs</Link></li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info & Social */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/feedback"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Whispers of Change
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/events"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Events
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blogs"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Blogs
-                </Link>
-              </li>
+            <ul className="space-y-2 mb-6">
+              <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/events" className="text-gray-400 hover:text-white transition-colors">Events</Link></li>
+              <li><Link href="/articles" className="text-gray-400 hover:text-white transition-colors">Articles</Link></li>
             </ul>
+
+            {/* Social Icons */}
+            <div className="flex space-x-5 mt-4 text-xl">
+              <a href="https://www.threads.net/@kankshadkate" target="_blank" rel="noopener noreferrer" className="hover:text-white text-gray-400"><SiThreads /></a>
+              <a href="https://www.instagram.com/kankshadkate" target="_blank" rel="noopener noreferrer" className="hover:text-white text-gray-400"><FaInstagram /></a>
+              <a href="https://whatsapp.com/channel/0029Vb67P9cISTkI7C9hsz1x" target="_blank" rel="noopener noreferrer" className="hover:text-white text-gray-400"><FaWhatsapp /></a>
+              <a href="https://www.linkedin.com/company/kanksha-d-kate/" target="_blank" rel="noopener noreferrer" className="hover:text-white text-gray-400"><FaLinkedinIn /></a>
+              <a href="https://www.youtube.com/@kankshadkate" target="_blank" rel="noopener noreferrer" className="hover:text-white text-gray-400"><FaYoutube /></a>
+              <a href="https://x.com/kankshadkate" target="_blank" rel="noopener noreferrer" className="hover:text-white text-gray-400"><FaXTwitter /></a>
+            </div>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Kanksha D'Kate. All rights reserved.
-          </p>
-
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link
-              href="/privacy"
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms"
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              Terms of Service
-            </Link>
-          </div>
+        <div className="border-t border-gray-800 pt-8 flex justify-center items-center text-center text-sm text-gray-400 space-x-2 flex-wrap">
+          <p>© {new Date().getFullYear()} Kanksha D&apos;Kate. All rights reserved.</p>
+          <span className="text-gray-500">|</span>
+          <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+          <span className="text-gray-500">|</span>
+          <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
         </div>
       </div>
     </footer>

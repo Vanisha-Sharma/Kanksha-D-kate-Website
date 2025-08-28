@@ -16,7 +16,7 @@ export function VideoSelector({
   isPlaying,
   onPlayPause,
 }: VideoSelectorProps) {
-  const videoNames = ["Cosmic Galaxy", "Corporate Skyline", "Nature Sunrise", "Ocean Waves", "Mountain Peaks"]
+  const videoNames = [""]
 
   return (
     <div className="absolute bottom-4 right-4 z-20 bg-black/50 backdrop-blur-sm rounded-lg p-3 flex items-center space-x-3">

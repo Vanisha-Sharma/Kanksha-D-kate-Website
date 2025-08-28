@@ -48,11 +48,13 @@ export default function AboutPage() {
               <div className="lg:w-1/3">
                 <div className="relative">
                   <div className="w-full h-80 bg-gradient-to-br from-stone-600 to-stone-700 rounded-2xl overflow-hidden border border-stone-500/30">
-                    <img
-                      src="/placeholder.svg?height=400&width=300&text=Kanksha+Professional+Portrait"
-                      alt="Kanksha Dhakate - Professional Portrait"
-                      className="w-full h-full object-cover"
-                    />
+                    <div className="w-full max-w-md mx-auto mt-8">
+                      <img
+                        src="/images/logo1.png"
+                        alt="Kanksha Dhakate - Professional Portrait"
+                        className="w-full h-full object-contain rounded-lg"
+                      />
+                    </div>
                   </div>
                   <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-br from-stone-600 to-stone-700 rounded-full border-2 border-black"></div>
                 </div>
@@ -62,30 +64,40 @@ export default function AboutPage() {
                 <div className="prose prose-lg max-w-none">
                   <p className="text-lg leading-relaxed text-gray-200 mb-6 text-justify">
                     <span className="font-bold">
-                      Kanksha D'Kate <span style = {{fontWeight: 'normal'}}>is</span> Asia's First Generation Atelier of
-                      Personal Evolution Powered by Neuroscience
+                      Kanksha D'Kate{" "}
+                      <span style={{ fontWeight: "normal" }}>is</span> Asia's
+                      First Generation Atelier of Personal Evolution Powered by
+                      Neuroscience
                     </span>
                     , and stands among the early pioneers in the global field of
                     Human Evolution. While rooted in Asia, our work and impact
-                    extend worldwide, serving clients across geographies who
-                    seek deep, lasting inner transformation. Our work is
-                    inspired by, but not limited to, the{" "}
+                    extend worldwide, serving people across geographies who seek
+                    deep, lasting inner transformation in their{" "}
+                    <span className="font-bold">
+                      Business, Career, Relationships, Health, Wealth, Joy, Love
+                      & Fulfillment.
+                    </span>{" "}
+                    Our work is inspired by, but not limited to, the{" "}
                     <span className="font-bold">Co-originators</span> of
                     Neuro-Linguistic Programming -{" "}
                     <span className="font-bold">Dr. John Grinder</span> and{" "}
                     <span className="font-bold">Dr. Richard Bandler</span> and
-                    other global geniuses in the industry of modern change work
-                    and human potential.
+                    also other global geniuses in the industry of modern change
+                    work and human potential.
                   </p>
 
                   <p className="text-lg leading-relaxed text-gray-300 mb-6 text-justify">
-                    We have an ecological integrative approach melding
-                    customized processes based on neurological precision,
-                    contextual intelligence, systemic thinking, internal
-                    programming, and beyond. Having cracked the code to a long
-                    lasting change leading to systemic evolution precise to each
-                    life, we are taking the legacy of the genius creators
-                    forward.
+                    We have an ecologically integrative approach. Our customized
+                    processes are grounded in proven principles of
+                    neuroplasticity, cognitive adaptation, emotional regulation,
+                    contextual intelligence, systemic thinking, unconscious
+                    processing and beyond. We enable transformation at both
+                    conscious and unconscious levels by working at the
+                    intersection of neuroscience and advanced neuro-linguistic
+                    installation technologies. This unique synthesis bridges
+                    scientific understanding with practical life enabling us to
+                    create lasting, timeless evolution in our clients while also
+                    taking the legacy of the genius creators forward.
                   </p>
                 </div>
               </div>
@@ -102,11 +114,12 @@ export default function AboutPage() {
                 trajectories, her mastery is further cultivated through
                 signature programs and practices alongside formal
                 certifications. Formally accredited by the originators
-                themselves, <span style = {{ fontStyle: 'italic' }}>Kanksha is also a Classic Code and New Code NLP
-                Practitioner, taught and Certified by the Co-creators -{" "}
-                Dr. John Grinder,{" "}
-                Carmen Bostic St Clair and
-                Michael Carroll.</span>
+                themselves,{" "}
+                <span style={{ fontStyle: "italic" }}>
+                  Kanksha is also an NLP Practitioner, taught and Certified by
+                  the Co-creator Dr. John Grinder, along with his eminent
+                  partner Carmen Bostic St Clair.
+                </span>
               </p>
 
               <p className="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
@@ -123,7 +136,7 @@ export default function AboutPage() {
                 experienced and known, Kanksha intends to enhance the
                 accessibility of it through{" "}
                 <Link
-                  href="/personal-story#qit-section"
+                  href="/voice-of-kanksha#QIS"
                   className="text-stone-300 hover:text-white transition-colors underline font-bold"
                 >
                   Quanta Integration Science (QIS)
@@ -138,6 +151,26 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+
+          <section className="py-12 px-4 bg-gradient-to-r from-stone-900/20 to-gray-900/20">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="bg-gradient-to-r from-stone-900/20 to-gray-900/20 rounded-lg p-6">
+                <h5 className="text-sm font-bold text-stone-400 mb-2">
+                  DISCLAIMERS
+                </h5>
+
+                <p className="text-sm text-gray-300 italic leading-relaxed mt-6 max-w-2xl mx-auto text-center">
+                  This work is not clinical neuroscience, laboratory
+                  neuroscience or medical practice. Our methodology represents a
+                  synthesis of scientific principles inspired by neuroscience,
+                  psychology, linguistics, and installation technologies,
+                  applied exclusively for the purpose of personal growth,
+                  transformation, and holistic life evolution.
+                </p>
+                
+              </div>
+            </div>
+          </section>
 
           {/* The Future of Personal Evolution Section */}
           <div className="mb-20 border-t border-stone-500/30 pt-16">
@@ -155,17 +188,36 @@ export default function AboutPage() {
               INTELLIGENCE which is driven by an evolved internal world. It's
               the kind of intelligence that emerges through inner calibration at
               the deeper levels of the{" "}
-              <span className="font-bold italic underline">mind-body matrix</span>.
+              <span className="font-bold italic underline">
+                mind-body matrix
+              </span>
+              .
             </p>
 
             <p className="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
-              It's an era where neuroscience is no longer just
-              research or theory. It has found its ground in real life and is on
-              the verge of revolutionizing every sphere it touches - education,
-              sports, media, entertainment, business, healthcare, technology,
-              leadership, and even governance. It is the frontier where human
-              potential will be amplified like never before activating
-              unprecedented levels of performance and transformation, driven by the EVOLVED ONES.
+              In today’s dynamic world, where a lot of others are busy learning,
+              building and beta testing AI use cases, the geniuses focus on
+              learning evolved abilities which not only keeps them up-to-date
+              with the global trends in their respective industries but also a
+              step ahead to predict and BE READY for what's to revolutionize.
+              Because even if the AI pilot programs may fail to make a
+              meaningful impact as yet, future will always belong to those who
+              can adapt, think smart in 360°, and solve problems creatively
+              across different areas, and do so much more with no stress while
+              AI successfully takes care of the specialized tasks. The need for
+              humans to cultivate evolved, advanced abilities faster keeps
+              escalating exponentially and this is where Personal Evolution
+              powered by Neuroscience comes to the rescue.
+            </p>
+
+            <p className="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
+              Neuroscience is no longer just research or theory. It has found
+              its ground in real life and is on the verge of revolutionizing
+              every sphere it touches - education, sports, media, entertainment,
+              business, healthcare, technology, leadership, and even governance.
+              It is the frontier where human potential will be amplified like
+              never before activating unprecedented levels of performance and
+              transformation, driven by the EVOLVED ONES.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
@@ -176,8 +228,8 @@ export default function AboutPage() {
             </p>
 
             <p className="text-lg leading-relaxed text-gray-200 mb-4 text-justify">
-              … and perhaps, you're beginning to sense the same question Kanksha
-              did a few years ago:
+              … and perhaps, you're beginning to sense the same question we did
+              a few years ago:
             </p>
 
             <p className="text-lg italic text-amber-300 font-medium mb-8 text-justify">
@@ -202,7 +254,7 @@ export default function AboutPage() {
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-stone-400 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold text-white">CEOs</h4>
+                      <h4 className="text-lg font-semibold text-white">CXOs</h4>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -217,7 +269,7 @@ export default function AboutPage() {
                     <CheckCircle className="w-5 h-5 text-stone-400 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-lg font-semibold text-white">
-                        Business Executives
+                        Working Professionals
                       </h4>
                     </div>
                   </div>
@@ -266,6 +318,25 @@ export default function AboutPage() {
                     <div>
                       <h4 className="text-lg font-semibold text-white">
                         Homemakers
+                      </h4>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-stone-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-semibold text-white">
+                        Freelancers
+                      </h4>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-stone-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-semibold text-white">
+                        Artists{" "}
+                        <span className="font-light">
+                          (Actors, Musicians, Designers, etc.)
+                        </span>
                       </h4>
                     </div>
                   </div>

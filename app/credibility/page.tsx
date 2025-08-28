@@ -209,7 +209,7 @@ export default function CredibilityPage() {
       {/* Hero Section */}
       <section className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-stone-900 via-gray-900 to-black cosmic-bg overflow-hidden">
   {/* Subtle background image */}
-  <div className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=1920')] bg-cover bg-center opacity-20 pointer-events-none"></div>
+  <div className="absolute inset-0 bg-[url('/images/libraries.jpg?height=800&width=1920')] bg-cover bg-center opacity-20 pointer-events-none"></div>
 
   <div ref={heroRef} className="relative z-10 max-w-5xl mx-auto text-center scroll-reveal px-2 sm:px-4">
     <div className="animate-fade-in-blur">
@@ -436,9 +436,8 @@ export default function CredibilityPage() {
         text-[clamp(12px,3vw,18px)]
         leading-tight
       ">
-        Connect With Our Research Team
+        Connect & Co-Discover with Us
       </span>
-      <ArrowRight className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6" />
     </Link>
   </Button>
 </div>

@@ -1,74 +1,63 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import { VideoSelector } from "./video-selector"
+import { useEffect, useRef, useState } from "react";
+import { VideoSelector } from "./video-selector";
 
 interface VideoBackgroundProps {
-  videoSrc: string
-  className?: string
+  videoSrc: string;
+  className?: string;
 }
 
 function VideoBackground({ videoSrc, className = "" }: VideoBackgroundProps) {
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const [currentVideo, setCurrentVideo] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(true)
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [currentVideo, setCurrentVideo] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const videos = [
-    "/videos/cosmic-galaxy.mp4",
+    "/videos/earth.mp4",
     "/videos/corporate-skyline.mp4",
     "/videos/nature-sunrise.mp4",
     "/videos/ocean-waves.mp4",
     "/videos/mountain-peaks.mp4",
-  ]
+  ];
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.7 // Slightly slow for cinematic effect
+      videoRef.current.playbackRate = 0.7; // Slightly slow for cinematic effect
       videoRef.current.play().catch(() => {
         // Autoplay failed, which is expected in some browsers
-      })
+      });
     }
 
     // Rotate videos every 25 seconds for variety
     const interval = setInterval(() => {
-      setCurrentVideo((prev) => (prev + 1) % videos.length)
-    }, 25000)
+      setCurrentVideo((prev) => (prev + 1) % videos.length);
+    }, 25000);
 
-    return () => clearInterval(interval)
-  }, [videoSrc, videos.length])
-
-  const handlePlayPause = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause()
-      } else {
-        videoRef.current.play()
-      }
-      setIsPlaying(!isPlaying)
-    }
-  }
+    return () => clearInterval(interval);
+  }, [videoSrc, videos.length]);
 
   return (
     <>
       {/* Edge-to-Edge Impressive Video Background */}
-      <div className={`absolute inset-0 w-full h-full overflow-hidden bg-black ${className}`}>
+      <div
+        className={`absolute inset-0 w-full h-full overflow-hidden bg-black ${className}`}
+      >
         <video
           ref={videoRef}
           autoPlay
           muted
-          loop
           playsInline
-          key={currentVideo} // Force re-render when video changes
+          key={currentVideo}
+          onEnded={() => setCurrentVideo((prev) => (prev + 1) % videos.length)}
           className="absolute top-0 left-0 w-full h-full object-cover opacity-50"
           style={{
             minWidth: "100%",
             minHeight: "100%",
-            transform: "scale(1.02)", // Slight scale to ensure no gaps
+            transform: "scale(1.02)",
           }}
         >
           <source src={videos[currentVideo]} type="video/mp4" />
-          {/* Fallback gradient for business appeal */}
-          <div className="absolute inset-0 bg-gradient-to-br from-stone-900 via-gray-800 to-black opacity-90"></div>
         </video>
 
         {/* Professional overlay for business appeal */}
@@ -111,25 +100,18 @@ function VideoBackground({ videoSrc, className = "" }: VideoBackgroundProps) {
               key={index}
               onClick={() => setCurrentVideo(index)}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentVideo ? "bg-stone-400 w-6" : "bg-stone-600 hover:bg-stone-500"
+                index === currentVideo
+                  ? "bg-stone-400 w-6"
+                  : "bg-stone-600 hover:bg-stone-500"
               }`}
               aria-label={`Switch to video ${index + 1}`}
             />
           ))}
         </div>
-
-        {/* Video Controls */}
-        <VideoSelector
-          currentVideo={currentVideo}
-          totalVideos={videos.length}
-          onVideoChange={setCurrentVideo}
-          isPlaying={isPlaying}
-          onPlayPause={handlePlayPause}
-        />
       </div>
     </>
-  )
+  );
 }
 
-export default VideoBackground
-export { VideoBackground }
+export default VideoBackground;
+export { VideoBackground };

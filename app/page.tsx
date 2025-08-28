@@ -31,16 +31,23 @@ export default function HomePage() {
           className="relative z-10 text-left spacing-responsive-md scroll-reveal max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8"
         >
           {/* Main Heading Only */}
-          <div className="spacing-responsive-lg text-center">
-            <h1 className="text-lg sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-shimmer animate-gradient-shift leading-tight px-2 mb-12 sm:mb-16">
-              POSITIVELY INFLUENCE YOUR WORLD
+          <div className="px-4 sm:px-6 lg:px-8 text-center space-y-6 sm:space-y-8">
+            <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-shimmer animate-gradient-shift leading-snug sm:leading-tight px-2 sm:px-0">
+              POSITIVELY INFLUENCE
+              <br className="block sm:hidden" /> YOUR WORLD
             </h1>
 
-            <p className="text-base center italic">
-              Experience Success on Steroids Where You Make Things Happen!
+            <p className="text-lg sm:text-2xl md:text-2xl italic">
+  In Business. Career. Health. Relationships. Fulfillment.{" "}
+  <span className="whitespace-nowrap">Full Life Spectrum.</span>
+</p>
+
+            <p className="text-sm sm:text-lg md:text-lg italic">
+              In a world that's evolving at a quantum speed,
+              <br className="block sm:hidden" /> Evolution is not a choice, it's
+              a necessity.
             </p>
           </div>
-          
 
           {/* CTA Button */}
 
@@ -50,13 +57,12 @@ export default function HomePage() {
               asChild
             >
               <Link
-                href="/contact"
+                href="/programs"
                 className="flex flex-col sm:flex-row items-center justify-centergap-2 sm:gap-3 w-full"
               >
                 <span className="text-center break-words w-full">
-                  EXPERIENCE A BREAKTHROUGH
+                  BEGIN MY BREAKTHROUGHS
                 </span>
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
               </Link>
             </Button>
           </div>
@@ -68,9 +74,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16 scroll-reveal">
             <h2 className="text-responsive-3xl font-bold mb-4 text-shimmer">
-              EXPLORE OUR UNIVERSE
+              EXPLORE
             </h2>
-            <div className="w-16 sm:w-24 h-1 bg-professional-gradient mx-auto rounded-full"></div>
+            <p className="font-bold italic text-shimmer text-2xl sm:text-3xl">
+              LIVE LIFE IN YOUR FAVOUR
+            </p>
           </div>
 
           <div
@@ -90,10 +98,10 @@ export default function HomePage() {
                       <Star className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-stone-300 transition-colors">
-                      ABOUT KANKSHA D'KATE
+                      About Kanksha D'Kate
                     </h3>
                     <p className="text-sm sm:text-base text-gray-300 group-hover:text-gray-200 transition-colors leading-relaxed">
-                      Discover the vision and mission behind the brand
+                      Know more about KANKSHA D'KATE
                     </p>
                   </div>
                   <div className="mt-4 sm:mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -116,10 +124,35 @@ export default function HomePage() {
                       <Zap className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-stone-300 transition-colors">
-                      TRANSFORMATION EXPERIENCES
+                      Evolution Plans
                     </h3>
                     <p className="text-sm sm:text-base text-gray-300 group-hover:text-gray-200 transition-colors leading-relaxed">
-                      ¡FLo! Immersion and ¡FLo! Stream transformation services
+                      ¡FLo! Immersion <br /> ¡FLo! Stream
+                    </p>
+                  </div>
+                  <div className="mt-4 sm:mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 mx-auto text-stone-400" />
+                  </div>
+                </CardContent>
+              </AnimatedCard>
+            </Link>
+
+            <Link href="/articles" className="group">
+              <AnimatedCard
+                animation="slide-up"
+                delay={300}
+                className="h-full interactive-hover"
+              >
+                <CardContent className="padding-responsive-sm text-center h-full flex flex-col justify-between">
+                  <div>
+                    <div className="mx-auto mb-4 sm:mb-6 p-3 sm:p-4 bg-gradient-to-br from-gray-700 to-stone-600 rounded-full w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-subtle-pulse">
+                      <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-stone-300 transition-colors">
+                      Insights for <br /> Micro-Evolution
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-300 group-hover:text-gray-200 transition-colors leading-relaxed">
+                      Articles that build perspectives
                     </p>
                   </div>
                   <div className="mt-4 sm:mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -142,10 +175,12 @@ export default function HomePage() {
                       <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-stone-300 transition-colors">
-                      VOICE OF KANKSHA
+                      Voice Of Kanksha
                     </h3>
                     <p className="text-sm sm:text-base text-gray-300 group-hover:text-gray-200 transition-colors leading-relaxed">
-                      The personal journey of founder Kanksha Dhakate
+                      A glimpse into the mind and meaning behind the science
+                      <br />
+                      KANKSHA, in her own words..
                     </p>
                   </div>
                   <div className="mt-4 sm:mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -168,10 +203,10 @@ export default function HomePage() {
                       <Star className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-stone-300 transition-colors">
-                      WHISPERS OF CHANGE
+                      Whispers Of Change
                     </h3>
                     <p className="text-sm sm:text-base text-gray-300 group-hover:text-gray-200 transition-colors leading-relaxed">
-                      Testimonials from transformed souls
+                      Stories of transformation
                     </p>
                   </div>
                   <div className="mt-4 sm:mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -194,10 +229,10 @@ export default function HomePage() {
                       <Zap className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-stone-300 transition-colors">
-                      TRANSFORMATION EVENTS
+                      Upcoming Events
                     </h3>
                     <p className="text-sm sm:text-base text-gray-300 group-hover:text-gray-200 transition-colors leading-relaxed">
-                      Upcoming transformative experiences
+                      Stay tuned to register for our upcoming events
                     </p>
                   </div>
                   <div className="mt-4 sm:mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -220,10 +255,10 @@ export default function HomePage() {
                       <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-stone-300 transition-colors">
-                      CONNECT WITH US
+                      Got Questions? We're here!
                     </h3>
                     <p className="text-sm sm:text-base text-gray-300 group-hover:text-gray-200 transition-colors leading-relaxed">
-                      Begin your transformation journey
+                      Reach out to us
                     </p>
                   </div>
                   <div className="mt-4 sm:mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
