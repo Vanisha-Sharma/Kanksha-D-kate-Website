@@ -48,11 +48,11 @@ export default function AboutPage() {
               <div className="lg:w-1/3">
                 <div className="relative">
                   <div className="w-full h-80 bg-gradient-to-br from-stone-600 to-stone-700 rounded-2xl overflow-hidden border border-stone-500/30">
-                    <div className="w-full max-w-md mx-auto mt-8">
+                    <div className="w-full max-w-md mx-auto mt-8 md:text-left text-center">
                       <img
                         src="/images/logo1.png"
                         alt="Kanksha Dhakate - Professional Portrait"
-                        className="w-full h-full object-contain rounded-lg"
+                        className="w-full h-full object-contain rounded-lg md:mx-0 mx-auto"
                       />
                     </div>
                   </div>
@@ -74,8 +74,8 @@ export default function AboutPage() {
                     extend worldwide, serving people across geographies who seek
                     deep, lasting inner transformation in their{" "}
                     <span className="font-bold">
-                      Business, Career, Relationships, Health, Wealth, Joy, Love
-                      & Fulfillment.
+                      Business, Career, Relationships, Health, Joy, Love &
+                      Fulfillment.
                     </span>{" "}
                     Our work is inspired by, but not limited to, the{" "}
                     <span className="font-bold">Co-originators</span> of
@@ -167,7 +167,6 @@ export default function AboutPage() {
                   applied exclusively for the purpose of personal growth,
                   transformation, and holistic life evolution.
                 </p>
-                
               </div>
             </div>
           </section>
