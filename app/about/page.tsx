@@ -194,8 +194,8 @@ export default function AboutPage() {
             </p>
 
             <p className="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
-              In today’s dynamic world, where a lot of others are busy learning,
-              building and beta testing AI use cases, the geniuses focus on
+              In today’s dynamic times, while a lot of others are busy learning,
+              building and beta testing AI use cases, the geniuses also focus on
               learning evolved abilities which not only keeps them up-to-date
               with the global trends in their respective industries but also a
               step ahead to predict and BE READY for what's to revolutionize.
