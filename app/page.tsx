@@ -179,8 +179,6 @@ export default function HomePage() {
                     </h3>
                     <p className="text-sm sm:text-base text-gray-300 group-hover:text-gray-200 transition-colors leading-relaxed">
                       A glimpse into the mind and meaning behind the science
-                      <br />
-                      KANKSHA, in her own words..
                     </p>
                   </div>
                   <div className="mt-4 sm:mt-6 opacity-0 group-hover:opacity-100 transition-opacity">

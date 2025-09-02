@@ -242,83 +242,83 @@ export default function VoiceOfKankshaPage() {
             </h3>
 
             <div className="grid lg:grid-cols-3 gap-12 mb-16">
-  {/* Main Story Column */}
-  <div className="lg:col-span-2">
-    <div className="prose prose-lg max-w-none">
-      <p className="text-base text-gray-700 leading-relaxed mb-6 first-letter:text-6xl first-letter:font-bold first-letter:text-gray-900 first-letter:float-left first-letter:mr-3 first-letter:mt-1 text-justify">
-        As a child, I would neither blindly rebel against the world
-        nor simply obey it. Instead, I watched it closely and with
-        an immense clarity that went far beyond my years. I didn't
-        realize then how valuable that would turn out to be but I
-        enjoyed the process. All the while, as life took me through
-        all kinds of seasons, delights, and milestones, I found
-        myself attuning to the deeper currents flowing beneath it
-        all.
-      </p>
+              {/* Main Story Column */}
+              <div className="lg:col-span-2">
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-base text-gray-700 leading-relaxed mb-6 first-letter:text-6xl first-letter:font-bold first-letter:text-gray-900 first-letter:float-left first-letter:mr-3 first-letter:mt-1 text-justify">
+                    As a child, I would neither blindly rebel against the world
+                    nor simply obey it. Instead, I watched it closely and with
+                    an immense clarity that went far beyond my years. I didn't
+                    realize then how valuable that would turn out to be but I
+                    enjoyed the process. All the while, as life took me through
+                    all kinds of seasons, delights, and milestones, I found
+                    myself attuning to the deeper currents flowing beneath it
+                    all.
+                  </p>
 
-      {/* Mobile-only image placement after first paragraph */}
-      <div className="block lg:hidden w-full mb-6">
-        <img
-          src="/images/Kanksha/final4.png"
-          alt="Kanksha as a child observing the world"
-          className="w-full h-[470px] object-cover rounded-lg shadow-lg"
-        />
-      </div>
+                  {/* Mobile-only image placement after first paragraph */}
+                  <div className="block lg:hidden w-full mb-6">
+                    <img
+                      src="/images/Kanksha/final4.png"
+                      alt="Kanksha as a child observing the world"
+                      className="w-full h-[470px] object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
 
-      <p className="text-base text-gray-700 leading-relaxed mb-6 text-justify">
-        While many chose to move fast, I chose to move deep instead,
-        giving myself the time to feel and observe. Over time, my
-        way of living fueled and sharpened my sensitivity,
-        observation, ability to see subtle patterns, feel quiet
-        energy shifts and see through other's internal worlds, only
-        to realize that there was a{" "}
-        <strong className="text-gray-900">
-          WORLD behind the world
-        </strong>{" "}
-        and again, I began naturally tuning into it too.
-      </p>
+                  <p className="text-base text-gray-700 leading-relaxed mb-6 text-justify">
+                    While many chose to move fast, I chose to move deep instead,
+                    giving myself the time to feel and observe. Over time, my
+                    way of living fueled and sharpened my sensitivity,
+                    observation, ability to see subtle patterns, feel quiet
+                    energy shifts and see through other's internal worlds, only
+                    to realize that there was a{" "}
+                    <strong className="text-gray-900">
+                      WORLD behind the world
+                    </strong>{" "}
+                    and again, I began naturally tuning into it too.
+                  </p>
 
-      <p className="text-base text-gray-700 leading-relaxed mb-6 text-justify">
-        One afternoon back in school during my early teenage years,
-        I watched my homeroom teacher speak to another teacher with
-        her usual warm smile. But that day she seemed a bit
-        different, in the sense that something was not right with
-        her. Her tone was as if her mind was elsewhere than on the
-        words she was speaking, there were more dragged pauses than
-        usual. It sounded like a familiar piece of music but played
-        out of tune using some off notes. Later as she passed by, I
-        asked her in a low voice: "Miss, do you sometimes smile when
-        you're afraid?"
-      </p>
+                  <p className="text-base text-gray-700 leading-relaxed mb-6 text-justify">
+                    One afternoon back in school during my early teenage years,
+                    I watched my homeroom teacher speak to another teacher with
+                    her usual warm smile. But that day she seemed a bit
+                    different, in the sense that something was not right with
+                    her. Her tone was as if her mind was elsewhere than on the
+                    words she was speaking, there were more dragged pauses than
+                    usual. It sounded like a familiar piece of music but played
+                    out of tune using some off notes. Later as she passed by, I
+                    asked her in a low voice: "Miss, do you sometimes smile when
+                    you're afraid?"
+                  </p>
 
-      <p className="text-base text-gray-700 leading-relaxed mb-6 text-justify">
-        She froze as she stared at me, went back to being
-        contemplative and her uneasiness was clearly visible. Days
-        later, we got to know that she had lost someone very close.
-        That was the first time I realized and understood: even pain
-        could be perfectly performed. Not long after, I came across
-        a book in my father's cabinet. It was a collection of ideas
-        and questions from the minds of Greek philosophers, mainly
-        Socrates and Plato. As I began to read the book, it made me
-        aware of the conversations I was having with myself on the
-        inside silently. It nudged me to ask questions that were
-        profound and beyond my age. These questions laid a
-        foundational lens through which I began to see the world.
-      </p>
-    </div>
-  </div>
+                  <p className="text-base text-gray-700 leading-relaxed mb-6 text-justify">
+                    She froze as she stared at me, went back to being
+                    contemplative and her uneasiness was clearly visible. Days
+                    later, we got to know that she had lost someone very close.
+                    That was the first time I realized and understood: even pain
+                    could be perfectly performed. Not long after, I came across
+                    a book in my father's cabinet. It was a collection of ideas
+                    and questions from the minds of Greek philosophers, mainly
+                    Socrates and Plato. As I began to read the book, it made me
+                    aware of the conversations I was having with myself on the
+                    inside silently. It nudged me to ask questions that were
+                    profound and beyond my age. These questions laid a
+                    foundational lens through which I began to see the world.
+                  </p>
+                </div>
+              </div>
 
-  {/* Desktop-only image column */}
-  <div className="hidden lg:block lg:col-span-1">
-    <div className="sticky top-8">
-      <img
-        src="/images/Kanksha/final4.png"
-        alt="Kanksha as a child observing the world"
-        className="w-full h-[470px] object-cover rounded-lg shadow-lg mb-4"
-      />
-    </div>
-  </div>
-</div>
+              {/* Desktop-only image column */}
+              <div className="hidden lg:block lg:col-span-1">
+                <div className="sticky top-8">
+                  <img
+                    src="/images/Kanksha/final4.png"
+                    alt="Kanksha as a child observing the world"
+                    className="w-full h-[470px] object-cover rounded-lg shadow-lg mb-4"
+                  />
+                </div>
+              </div>
+            </div>
 
             {/* The Pivotal Question - Paragraph Format */}
             <div className="max-w-4xl mx-auto mb-16">
@@ -447,7 +447,7 @@ export default function VoiceOfKankshaPage() {
             {/* Key Realization */}
             <div className="max-w-4xl mx-auto space-y-6 text-base text-gray-700 leading-relaxed text-justify mb-16">
               <p>
-                With all the proven perspectives throughout my life, one truth
+                With various proven perspectives in my life so far, one truth
                 became glaringly clear: no matter how refined the frameworks,
                 plans, solutions and decks were, the real variables were always
                 humans. What derailed execution wasn't the plan; it was the
@@ -456,11 +456,10 @@ export default function VoiceOfKankshaPage() {
               <p>
                 No matter which professional I interacted with, my observations
                 remained the same (with little to no variations) across
-                industries, people, ecosystems and the globe. Behind every
-                well-thought strategy, there was an inner pattern at play that
-                deeply influenced the outcomes. Therefore, in spite of a
-                sophisticated strategy, the real work had to happen at a deeper
-                level.
+                industries, people and ecosystems. Behind every well-thought
+                strategy, there was an inner pattern at play that deeply
+                influenced the outcomes. Therefore, in spite of a sophisticated
+                strategy, the real work had to happen at a deeper level.
               </p>
             </div>
 
@@ -475,9 +474,11 @@ export default function VoiceOfKankshaPage() {
                     leadership. I didn't. I expanded it. People didn't need
                     something as shallow as advice, they needed something far
                     deeper. Something that could transform the{" "}
-                    <span className="italic">root cause</span> of their
-                    behaviors and bring true change, and it felt like... I was
-                    capable of offering that to them.
+                    <span style={{ textDecoration: "underline" }}>
+                      root cause
+                    </span>{" "}
+                    of their behaviors and bring true change, and it felt
+                    like... I was capable of offering that to them.
                   </p>
                   <p>
                     There was another pattern I kept encountering across
@@ -523,8 +524,8 @@ export default function VoiceOfKankshaPage() {
             {/* I AM A HUMAN AUGMENTATION SCIENTIST - No Background Box */}
             <div className="text-center mb-16">
               <h2 className="text-xl md:text-2xl text-gray-900 tracking-wider mb-8">
-  I AM A HUMAN AUGMENTATION SCIENTIST.
-</h2>
+                I AM A HUMAN AUGMENTATION SCIENTIST.
+              </h2>
               <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed text-justify">
                 I navigate the space where neuroscience meets destiny by
                 aligning the unconscious mind with DEEPER and SUPER INTELLIGENCE
