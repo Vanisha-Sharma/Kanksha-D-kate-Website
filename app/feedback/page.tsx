@@ -1,26 +1,77 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Star,
-  Zap,
-  Play,
-  Upload,
-  Video,
-  MessageSquare,
-  Quote,
-} from "lucide-react";
-import { useState } from "react";
+import { Star, Play, Video, MessageSquare, Quote, Zap } from "lucide-react";
 
 export default function FeedbackPage() {
   const [selectedTestimonial, setSelectedTestimonial] = useState<number | null>(
     null
   );
   const [feedbackType, setFeedbackType] = useState<"text" | "video" | "">("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // form states
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [role, setRole] = useState("");
+  const [experience, setExperience] = useState("");
+  const [story, setStory] = useState("");
+  const [videoFile, setVideoFile] = useState<File | null>(null);
+
+  // handle submit
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      let res;
+      if (feedbackType === "video") {
+        const fd = new FormData();
+        fd.append("feedbackType", "video");
+        fd.append("name", name);
+        if (email) fd.append("email", email);
+        if (role) fd.append("role", role);
+        if (experience) fd.append("experience", experience);
+        if (videoFile) fd.append("videoFile", videoFile);
+
+        res = await fetch("/api/wocform", { method: "POST", body: fd });
+      } else {
+        const payload = {
+          feedbackType: "text",
+          name,
+          email,
+          role,
+          experience,
+          story,
+        };
+        res = await fetch("/api/wocform", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      }
+
+      if (!res.ok) throw new Error("Failed to submit");
+
+      setIsSubmitted(true);
+      setName("");
+      setEmail("");
+      setRole("");
+      setExperience("");
+      setStory("");
+      setVideoFile(null);
+    } catch (err) {
+      console.error(err);
+      alert("Submission failed. Try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const testimonials = [
     {
@@ -376,6 +427,7 @@ export default function FeedbackPage() {
               </p>
             </CardHeader>
             <CardContent className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
               {/* Feedback Type Selection */}
               <div className="space-y-4">
                 <label className="block text-sm font-medium text-gray-300 mb-3">
@@ -635,6 +687,7 @@ export default function FeedbackPage() {
                   </p>
                 </div>
               )}
+              </form>
             </CardContent>
           </Card>
         </div>

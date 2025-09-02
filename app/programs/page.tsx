@@ -151,32 +151,46 @@ export default function ServicesPage() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
+  try {
+    const response = await fetch("http://localhost:5000/api/programform", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
 
-      // Simulate document download
-      const link = document.createElement("a");
-      link.href = "/placeholder.pdf";
-      link.download = "FLo-Application.pdf";
-      link.click();
+    if (!response.ok) throw new Error("Failed to submit");
 
-      setFormData({
-        fullName: "",
-        whatsappNumber: "",
-        email: "",
-        confirmEmail: "",
-        service: "",
-        message: "",
-        experience: "",
-        country: "",
-      });
-    }, 2000);
-  };
+    setIsSubmitted(true);
+
+    // Optional: download PDF if backend sends one later
+    const link = document.createElement("a");
+    link.href = "/placeholder.pdf";
+    link.download = "FLo-Application.pdf";
+    link.click();
+
+    // Reset form
+    setFormData({
+      fullName: "",
+      whatsappNumber: "",
+      email: "",
+      confirmEmail: "",
+      service: "",
+      message: "",
+      experience: "",
+      country: "",
+    });
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("Something went wrong. Please try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   const faqData = [
     {
@@ -1005,7 +1019,7 @@ export default function ServicesPage() {
                   step: "02",
                   title: "Activation",
                   description:
-                    "Begin neuro-experiential changework using Neuroscience & Quanta Integration Science to activate deep internal shifts.",
+                    "Begin neuro-experiential changework using Quanta Integration Science to activate deep internal shifts.",
                   icon: Zap,
                 },
                 {

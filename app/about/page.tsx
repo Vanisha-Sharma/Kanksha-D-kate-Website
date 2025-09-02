@@ -152,25 +152,6 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <section className="py-12 px-4 bg-gradient-to-r from-stone-900/20 to-gray-900/20">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="bg-gradient-to-r from-stone-900/20 to-gray-900/20 rounded-lg p-6">
-                <h5 className="text-sm font-bold text-stone-400 mb-2">
-                  DISCLAIMERS
-                </h5>
-
-                <p className="text-sm text-gray-300 italic leading-relaxed mt-6 max-w-2xl mx-auto text-center">
-                  This work is not clinical neuroscience, laboratory
-                  neuroscience or medical practice. Our methodology represents a
-                  synthesis of scientific principles inspired by neuroscience,
-                  psychology, linguistics, and installation technologies,
-                  applied exclusively for the purpose of personal growth,
-                  transformation, and holistic life evolution.
-                </p>
-              </div>
-            </div>
-          </section>
-
           {/* The Future of Personal Evolution Section */}
           <div className="mb-20 border-t border-stone-500/30 pt-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-shimmer">
@@ -178,11 +159,10 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-lg leading-relaxed text-gray-200 mb-8 text-justify">
-              We are entering a new era, not of Artificial Intelligence alone,
-              but of AUGMENTED HUMANITY. Where the greatest competitive
-              advantage is not more data or speed, but what AI cannot replicate.
+              We are entering a new era, which does not belong to Artificial Intelligence alone
+              but also AUGMENTED HUMANITY.
               As the world witnesses AI rewrite industries and render roles
-              obsolete, what sets one apart now is not just knowledge or ability
+              obsolete, the greatest competitive advantage now is not just knowledge or ability
               to use artificial intelligence but an integrated, SUPER
               INTELLIGENCE which is driven by an evolved internal world. It's
               the kind of intelligence that emerges through inner calibration at
@@ -199,6 +179,9 @@ export default function AboutPage() {
               learning evolved abilities which not only keeps them up-to-date
               with the global trends in their respective industries but also a
               step ahead to predict and BE READY for what's to revolutionize.
+            </p>
+
+            <p className="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
               Because even if the AI pilot programs may fail to make a
               meaningful impact as yet, future will always belong to those who
               can adapt, think smart in 360°, and solve problems creatively
@@ -379,11 +362,30 @@ export default function AboutPage() {
                     Businesses, educational institutions, and communities
                     looking to evolve their people, culture and ecosystem can
                     invite Kanksha for curated sessions, focused conversations,
-                    or experiential sessions - powered by neuroscience.
+                    or experiential sessions.
                   </p>
                 </div>
               </div>
             </div>
+
+            <section className="py-12 px-4 bg-gradient-to-r from-stone-900/20 to-gray-900/20">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="bg-gradient-to-r from-stone-900/20 to-gray-900/20 rounded-lg p-6">
+                <h5 className="text-sm font-bold text-stone-400 mb-2">
+                  DISCLAIMER
+                </h5>
+
+                <p className="text-sm text-gray-300 italic leading-relaxed mt-6 max-w-2xl mx-auto text-center">
+                  This work is not clinical neuroscience, laboratory
+                  neuroscience or medical practice. Our methodology represents a
+                  synthesis of scientific principles inspired by neuroscience,
+                  psychology, linguistics, and installation technologies,
+                  applied exclusively for the purpose of personal growth,
+                  transformation, and holistic life evolution.
+                </p>
+              </div>
+            </div>
+          </section>
 
             {/* CTA */}
             <div className="text-center mt-16 px-4 py-8 glass-dark rounded-lg border border-stone-500/20">

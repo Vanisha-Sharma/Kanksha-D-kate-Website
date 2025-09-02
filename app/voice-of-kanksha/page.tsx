@@ -113,14 +113,14 @@ export default function VoiceOfKankshaPage() {
                   </p>
                   <p className="text-base text-gray-700">
                     We lacked intelligence in how we evolved{" "}
-                    <span style={{ fontStyle: "italic" }}>with</span> them.
+                    <span style={{ fontWeight: "bold" }}>with</span> them.
                   </p>
                 </div>
               </div>
 
               <div className="break-inside-avoid mb-8">
                 <p className="text-base text-gray-700 leading-relaxed mb-4">
-                  Today, fire looks different - it's data, AI, nanotech,
+                  Today, fire looks different. It's data, AI, nanotech,
                   gene-editing, neural decoding.
                 </p>
                 <p className="text-base text-gray-700 leading-relaxed mb-4">
