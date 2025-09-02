@@ -155,41 +155,44 @@ export default function ServicesPage() {
   e.preventDefault();
   setIsSubmitting(true);
 
+  const payload = { ...formData };
+  console.log("Sending Program Form payload:", payload);
+
   try {
     const response = await fetch("http://localhost:5000/api/programform", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(payload),
     });
 
-    if (!response.ok) throw new Error("Failed to submit");
+    const data = await response.json();
+    console.log("Response from Program API:", data);
 
-    setIsSubmitted(true);
-
-    // Optional: download PDF if backend sends one later
-    const link = document.createElement("a");
-    link.href = "/placeholder.pdf";
-    link.download = "FLo-Application.pdf";
-    link.click();
-
-    // Reset form
-    setFormData({
-      fullName: "",
-      whatsappNumber: "",
-      email: "",
-      confirmEmail: "",
-      service: "",
-      message: "",
-      experience: "",
-      country: "",
-    });
-  } catch (error) {
-    console.error("Error submitting form:", error);
+    if (response.ok) {
+      setIsSubmitted(true);
+      setFormData({
+        fullName: "",
+        whatsappNumber: "",
+        email: "",
+        confirmEmail: "",
+        service: "",
+        message: "",
+        experience: "",
+        country: "",
+      });
+      alert("Program form submitted successfully!");
+    } else {
+      console.error("Failed to submit program form:", data);
+      alert(`Error: ${data.error || "Failed to submit"}`);
+    }
+  } catch (err) {
+    console.error("Error submitting program form:", err);
     alert("Something went wrong. Please try again.");
   } finally {
     setIsSubmitting(false);
   }
 };
+
 
 
   const faqData = [
@@ -1076,7 +1079,6 @@ export default function ServicesPage() {
               participants have to pay the venue fees as charged directly by the
               hosting premises, in addition to the core program investment.
             </p>
-
           </div>
         </div>
       </section>

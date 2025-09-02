@@ -456,7 +456,7 @@ export default function VoiceOfKankshaPage() {
               <p>
                 No matter which professional I interacted with, my observations
                 remained the same (with little to no variations) across
-                industries, people and ecosystems. Behind every well-thought
+                industries, ecosystems and people. Behind every well-thought
                 strategy, there was an inner pattern at play that deeply
                 influenced the outcomes. Therefore, in spite of a sophisticated
                 strategy, the real work had to happen at a deeper level.

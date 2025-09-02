@@ -30,10 +30,10 @@ export default function ContactForm() {
   // Handle form submit
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
+  setIsSubmitting(true);
 
   const payload = { ...formData };
-
-  console.log("Sending payload:", payload); // debug
+  console.log("Sending Contact Form payload:", payload);
 
   try {
     const response = await fetch("http://localhost:5000/api/contactform", {
@@ -43,19 +43,23 @@ export default function ContactForm() {
     });
 
     const data = await response.json();
-    console.log("Response from server:", data);
+    console.log("Response from Contact API:", data);
 
     if (response.ok) {
       setIsSubmitted(true);
       setFormData({ name: "", email: "", service: "", message: "" });
+      alert("Contact form submitted successfully!");
     } else {
-      console.error("Failed to submit:", data);
+      console.error("Failed to submit contact form:", data);
+      alert(`Error: ${data.error || "Failed to submit"}`);
     }
   } catch (err) {
-    console.error("Error submitting:", err);
+    console.error("Error submitting contact form:", err);
+    alert("Something went wrong. Please try again.");
+  } finally {
+    setIsSubmitting(false);
   }
 };
-
 
 
   return (

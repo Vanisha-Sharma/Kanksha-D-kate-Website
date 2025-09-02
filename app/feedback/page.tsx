@@ -25,39 +25,46 @@ export default function FeedbackPage() {
 
   // handle submit
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    try {
-      let res;
-      if (feedbackType === "video") {
-        const fd = new FormData();
-        fd.append("feedbackType", "video");
-        fd.append("name", name);
-        if (email) fd.append("email", email);
-        if (role) fd.append("role", role);
-        if (experience) fd.append("experience", experience);
-        if (videoFile) fd.append("videoFile", videoFile);
+  try {
+    let res;
 
-        res = await fetch("/api/wocform", { method: "POST", body: fd });
-      } else {
-        const payload = {
-          feedbackType: "text",
-          name,
-          email,
-          role,
-          experience,
-          story,
-        };
-        res = await fetch("/api/wocform", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-      }
+    if (feedbackType === "video") {
+      const fd = new FormData();
+      fd.append("feedbackType", "video");
+      fd.append("name", name);
+      if (email) fd.append("email", email);
+      if (role) fd.append("role", role);
+      if (experience) fd.append("experience", experience);
+      if (videoFile) fd.append("videoFile", videoFile);
 
-      if (!res.ok) throw new Error("Failed to submit");
+      res = await fetch("http://localhost:5000/api/wocform", {
+        method: "POST",
+        body: fd,
+      });
+    } else {
+      const payload = {
+        feedbackType: "text",
+        name,
+        email,
+        role,
+        experience,
+        story,
+      };
 
+      res = await fetch("http://localhost:5000/api/wocform", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+    }
+
+    const data = await res.json();
+    console.log("Response from WOC API:", data);
+
+    if (res.ok) {
       setIsSubmitted(true);
       setName("");
       setEmail("");
@@ -65,13 +72,20 @@ export default function FeedbackPage() {
       setExperience("");
       setStory("");
       setVideoFile(null);
-    } catch (err) {
-      console.error(err);
-      alert("Submission failed. Try again.");
-    } finally {
-      setIsSubmitting(false);
+      alert("WOC form submitted successfully!");
+    } else {
+      console.error("Failed to submit WOC form:", data);
+      alert(`Error: ${data.error || "Failed to submit"}`);
     }
-  };
+  } catch (err) {
+    console.error("Error submitting WOC form:", err);
+    alert("Submission failed. Try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+
 
   const testimonials = [
     {
