@@ -18,13 +18,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <BrandLogo />
-            <p className="text-gray-400 mt-4 max-w-md">
-              Activating latent abilities of the human mind through
-              integration of neuroscience and precision-driven personal
-              evolution.
-            </p>
-          </div>
+  <div className="lg:ml-0 ml-[-12px]">
+    <BrandLogo />
+  </div>
+  <p className="text-gray-400 mt-4 max-w-md">
+    Activating latent abilities of the human mind through
+    integration of QIS and precision-driven personal
+    evolution.
+  </p>
+</div>
+
 
           {/* Quick Links */}
           <div>

@@ -129,7 +129,7 @@ export default function FeedbackPage() {
       rating: 5,
       type: "text",
       message: [
-        " I have joined Kanksha 14 months program, it has been six months now. Working with her has changed my life drastically. I did not experience anything like this before. In my business, I was not getting what I was expecting, but after procedures, I cracked 3CR, which is a huge growth for my business.",
+        " I have joined Kanksha 14 months program, it has been six months now. Working with her has changed my life drastically. I did not experience anything like this before. In my business, I was not getting what I was expecting, but after procedures, I cracked 3CR deal, which is a huge growth for my business.",
         "It is the biggest breakthrough for me. There is a Positive shift in my life, in my attitude and in my relationships. Now, there is a work-life balance. My relationship with my family, friends and colleagues is, at a very positive level, which was not before. I can say Kanksha's work is very impactful.",
         "And it has changed my life entirely and beautifully. There is more peace in my life now. I can see things positively and I can think out of the box.",
       ],

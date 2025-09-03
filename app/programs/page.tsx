@@ -10,7 +10,7 @@ type Country = {
   name: string;
   code: string;
 };
-
+import Link from "next/link";
 import { countries } from "@/lib/countries";
 import {
   Zap,
@@ -152,48 +152,46 @@ export default function ServicesPage() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  const payload = { ...formData };
-  console.log("Sending Program Form payload:", payload);
+    const payload = { ...formData };
+    console.log("Sending Program Form payload:", payload);
 
-  try {
-    const response = await fetch("http://localhost:5000/api/programform", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    const data = await response.json();
-    console.log("Response from Program API:", data);
-
-    if (response.ok) {
-      setIsSubmitted(true);
-      setFormData({
-        fullName: "",
-        whatsappNumber: "",
-        email: "",
-        confirmEmail: "",
-        service: "",
-        message: "",
-        experience: "",
-        country: "",
+    try {
+      const response = await fetch("http://localhost:5000/api/programform", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
-      alert("Program form submitted successfully!");
-    } else {
-      console.error("Failed to submit program form:", data);
-      alert(`Error: ${data.error || "Failed to submit"}`);
+
+      const data = await response.json();
+      console.log("Response from Program API:", data);
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({
+          fullName: "",
+          whatsappNumber: "",
+          email: "",
+          confirmEmail: "",
+          service: "",
+          message: "",
+          experience: "",
+          country: "",
+        });
+        alert("Program form submitted successfully!");
+      } else {
+        console.error("Failed to submit program form:", data);
+        alert(`Error: ${data.error || "Failed to submit"}`);
+      }
+    } catch (err) {
+      console.error("Error submitting program form:", err);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
-  } catch (err) {
-    console.error("Error submitting program form:", err);
-    alert("Something went wrong. Please try again.");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
-
-
+  };
 
   const faqData = [
     {
@@ -1021,8 +1019,18 @@ export default function ServicesPage() {
                 {
                   step: "02",
                   title: "Activation",
-                  description:
-                    "Begin neuro-experiential changework using Quanta Integration Science to activate deep internal shifts.",
+                  description: (
+                    <>
+                      Begin neuro-experiential changework using{" "}
+                      <Link
+                        href="/voice-of-kanksha#QIS"
+                        className="text-stone-300 hover:text-white transition-colors"
+                      >
+                        Quanta Integration Science (QIS)
+                      </Link>{" "}
+                      to activate deep internal shifts.
+                    </>
+                  ),
                   icon: Zap,
                 },
                 {

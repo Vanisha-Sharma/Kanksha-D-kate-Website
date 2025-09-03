@@ -1,5 +1,5 @@
-import Link from "next/link"
-import Image from "next/image"
+import Link from "next/link";
+import Image from "next/image";
 
 export default function BrandLogo() {
   return (
@@ -13,7 +13,7 @@ export default function BrandLogo() {
         priority
       />
     </Link>
-  )
+  );
 }
 
-export { BrandLogo }
+export { BrandLogo };
