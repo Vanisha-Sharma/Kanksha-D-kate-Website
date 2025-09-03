@@ -147,7 +147,7 @@ export default function ContactForm() {
               <option value="">Select a service</option>
               <option value="flo-immersion">¡FLo! Immersion</option>
               <option value="flo-stream">¡FLo! Stream</option>
-              <option value="both">Both Services</option>
+              <option value="both">Services for Businesses, Institutions and Communities</option>
               <option value="not-sure">I'm Not Sure Yet</option>
             </select>
           </div>

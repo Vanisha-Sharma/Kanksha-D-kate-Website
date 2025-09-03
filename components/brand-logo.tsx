@@ -9,7 +9,13 @@ export default function BrandLogo() {
         alt="KANKSHA D'KATE"
         width={320}
         height={120}
-        className="h-16 w-48 sm:h-20 sm:w-56 md:h-24 md:w-64 lg:h-32 lg:w-80 object-contain"
+        className="
+          h-24 w-64           /* bigger default for mobile */
+          sm:h-20 sm:w-56    /* small tablets */
+          md:h-24 md:w-64    /* medium devices */
+          lg:h-32 lg:w-80    /* desktop size (unchanged) */
+          object-contain
+        "
         priority
       />
     </Link>

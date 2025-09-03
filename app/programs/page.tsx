@@ -1112,9 +1112,9 @@ export default function ServicesPage() {
               {[
                 {
                   step: "01",
-                  title: "Request for Application on WhatsApp",
+                  title: "Request for Application",
                   description:
-                    'To begin, simply send a message saying "Open to the journey" on WhatsApp. A link for the nominal fees of ₹1200 (non-refundable) will be shared. Once completed, the application form will be sent your way.',
+                    'To begin, simply send a message requesting for application on WhatsApp. A link for the nominal fees of ₹1200 (non-refundable) will be shared. Once completed, the application form and login credentials will be sent your way.',
                   icon: MessageSquare,
                 },
                 {
@@ -1135,7 +1135,7 @@ export default function ServicesPage() {
                   step: "04",
                   title: "Receive Your Invitation to Enroll",
                   description:
-                    "If selected, you will receive an official invitation to book your spot and begin your journey.",
+                    "If selected, you will receive an official invitation to register for your chosen program and begin your journey",
                   icon: Crown,
                 },
               ].map((item, index) => (

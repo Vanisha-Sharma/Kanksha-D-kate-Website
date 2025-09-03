@@ -139,7 +139,7 @@ export default function FeedbackPage() {
     {
       id: 15,
       name: "Sophia",
-      title: "",
+      title: "Owner of Language School",
       rating: 5,
       type: "text",
       message: [
@@ -224,7 +224,7 @@ export default function FeedbackPage() {
       rating: 5,
       type: "text",
       message:
-        "As an entrepreneur, I was used to pushing through challenges with sheer determination and willpower. While this approach had brought me financial success, it was also leading to burnout, strained relationships, and a growing sense that something essential was missing from my life. I had tried various forms of personal development, from intensive workshops to one-on-one coaching, but nothing seemed to create lasting change at the level I needed. When I learned about Kanksha's work and the ¡FLo! methodology, I was intrigued by the promise of transformation that didn't require constant effort to maintain. The process exceeded my expectations in every way. Kanksha's ability to identify and work with the unconscious patterns that were driving my behavior was remarkable. Through the installation cycles, I experienced shifts that felt both immediate and deeply rooted. My relationship with stress completely transformed, instead of being overwhelmed by challenges, I found myself naturally accessing resourceful states that allowed me to navigate complexity with ease and even enjoyment. My business performance improved dramatically, not because I was working harder, but because I am executing from a fundamentally different internal state. Decision-making became intuitive, opportunities seemed to appear effortlessly, and my team responded to my leadership in ways that surprised everyone. The ripple effects extended far beyond business my marriage deepened, my health improved, and I rediscovered a sense of joy and purpose that I hadn't felt since childhood.",
+        "I had tried various forms of personal development, from intensive workshops to one-on-one coaching, but nothing seemed to create lasting change at the level I needed. When I learned about Kanksha's work and the ¡FLo! methodology, I was intrigued by the promise of transformation that didn't require constant effort to maintain. The process exceeded my expectations in every way. Kanksha's ability to identify and work with the unconscious patterns that were driving my behavior was remarkable. Through the installation cycles, I experienced shifts that felt both immediate and deeply rooted. My relationship with stress completely transformed, instead of being overwhelmed by challenges, I found myself naturally accessing resourceful states that allowed me to navigate complexity with ease and even enjoyment. My business performance improved dramatically, not because I was working harder, but because I am executing from a fundamentally different internal state. Decision-making became intuitive, opportunities seemed to appear effortlessly, and my team responded to my leadership in ways that surprised everyone. The ripple effects extended far beyond business my marriage deepened, my health improved, and I rediscovered a sense of joy and purpose that I hadn't felt since childhood.",
       videoThumbnail: null,
       hasVideo: false,
     },
