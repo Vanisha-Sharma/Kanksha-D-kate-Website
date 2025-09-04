@@ -9,7 +9,7 @@ interface Article {
   _id: string;
   title: string;
   content: string;
-  imageUrl: string;
+  imageUrl?: string; // optional
   author: string;
   createdAt: string;
 }
@@ -58,24 +58,30 @@ export default function BlogsPage() {
           {loading ? (
             <p className="text-center text-gray-400">Loading articles...</p>
           ) : articles.length === 0 ? (
-            <p className="text-center text-gray-400">No articles yet.</p>
+            <p className="text-center text-gray-400">Coming Soon...</p>
           ) : (
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {articles.map((article) => (
                 <Card
                   key={article._id}
-                  className="bg-stone-900/60 border border-stone-800 hover:border-stone-600 transition rounded-2xl overflow-hidden"
+                  className="bg-stone-900/60 border border-stone-800 hover:border-stone-600 transition rounded-2xl overflow-hidden cursor-pointer"
+                  onClick={() => toggleExpand(article._id)}
                 >
-                  <img
-                    src={article.imageUrl}
-                    alt={article.title}
-                    className="w-full h-48 object-cover"
-                  />
+                  {/* Only render image if it exists */}
+                  {article.imageUrl && (
+                    <img
+                      src={article.imageUrl}
+                      alt={article.title}
+                      className="w-full h-48 object-cover"
+                    />
+                  )}
+
                   <CardHeader>
                     <CardTitle className="line-clamp-2 text-lg font-bold text-stone-100">
                       {article.title}
                     </CardTitle>
                   </CardHeader>
+
                   <CardContent>
                     <div className="flex items-center gap-4 text-sm text-stone-400 mb-3">
                       <span className="flex items-center gap-1">
@@ -94,12 +100,9 @@ export default function BlogsPage() {
                       dangerouslySetInnerHTML={{ __html: article.content }}
                     ></p>
 
-                    <button
-                      onClick={() => toggleExpand(article._id)}
-                      className="text-blue-400 hover:text-blue-300 font-medium"
-                    >
+                    <p className="text-blue-400 hover:text-blue-300 font-medium">
                       {expanded[article._id] ? "Show Less" : "Read More"}
-                    </button>
+                    </p>
                   </CardContent>
                 </Card>
               ))}
