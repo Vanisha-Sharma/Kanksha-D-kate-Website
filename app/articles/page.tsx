@@ -1,15 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, User } from "lucide-react";
-import axios from "axios";
+import api from "@/lib/api";
 
 interface Article {
   _id: string;
   title: string;
   content: string;
-  imageUrl?: string; // optional
+  imageUrl?: string;
   author: string;
   createdAt: string;
 }
@@ -18,14 +18,39 @@ export default function BlogsPage() {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState<{ [key: string]: boolean }>({});
+  const [showToggle, setShowToggle] = useState<{ [key: string]: boolean }>({});
+
+  const contentRefs = useRef<{ [key: string]: HTMLParagraphElement | null }>({});
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/articles")
-      .then((res) => setArticles(res.data))
-      .catch((err) => console.error(err))
-      .finally(() => setLoading(false));
+    const fetchArticles = async () => {
+      try {
+        const res = await api.getArticles();
+        if (res.success) setArticles(res.data.articles);
+        else console.error("Failed to fetch articles:", res.message);
+      } catch (err) {
+        console.error("Error fetching articles:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchArticles();
   }, []);
+
+  useEffect(() => {
+    // Check if content exceeds 3 lines to show Read More
+    articles.forEach((article) => {
+      const el = contentRefs.current[article._id];
+      if (el) {
+        const lineHeight = parseInt(getComputedStyle(el).lineHeight, 10) || 18;
+        const maxHeight = lineHeight * 3; // 3 lines
+        setShowToggle((prev) => ({
+          ...prev,
+          [article._id]: el.scrollHeight > maxHeight,
+        }));
+      }
+    });
+  }, [articles]);
 
   const toggleExpand = (id: string) => {
     setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -61,69 +86,72 @@ export default function BlogsPage() {
             <p className="text-center text-gray-400">Coming Soon...</p>
           ) : (
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {articles.map((article) => (
-                <Card
-                  key={article._id}
-                  className="bg-stone-900/60 border border-stone-800 hover:border-stone-600 transition rounded-2xl overflow-hidden cursor-pointer"
-                  onClick={() => toggleExpand(article._id)}
-                >
-                  {/* Only render image if it exists */}
-                  {article.imageUrl && (
-                    <img
-                      src={article.imageUrl}
-                      alt={article.title}
-                      className="w-full h-48 object-cover"
-                    />
-                  )}
+              {articles.map((article) => {
+                const isExpanded = expanded[article._id];
+                return (
+                  <Card
+                    key={article._id}
+                    className="bg-stone-900/60 border border-stone-800 hover:border-stone-600 transition rounded-2xl overflow-hidden cursor-pointer"
+                  >
+                    {article.imageUrl && (
+                      <img
+                        src={`http://localhost:5001/api${article.imageUrl}`}
+                        alt={article.title || "Article Image"}
+                        className={`w-full object-cover transition-all duration-300 ${
+                          isExpanded ? "h-auto" : "h-48"
+                        }`}
+                        loading="lazy"
+                      />
+                    )}
 
-                  <CardHeader>
-                    <CardTitle className="line-clamp-2 text-lg font-bold text-stone-100">
-                      {article.title}
-                    </CardTitle>
-                  </CardHeader>
+                    <CardHeader>
+                      <CardTitle className="line-clamp-2 text-lg font-bold text-stone-100">
+                        {article.title || "Untitled"}
+                      </CardTitle>
+                    </CardHeader>
 
-                  <CardContent>
-                    <div className="flex items-center gap-4 text-sm text-stone-400 mb-3">
-                      <span className="flex items-center gap-1">
-                        <User size={14} /> {article.author}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar size={14} />{" "}
-                        {new Date(article.createdAt).toDateString()}
-                      </span>
-                    </div>
+                    <CardContent
+                      className={`transition-all duration-300 overflow-hidden`}
+                      onClick={() => toggleExpand(article._id)}
+                    >
+                      <div className="flex items-center gap-4 text-sm text-stone-400 mb-3">
+                        <span className="flex items-center gap-1">
+                          <User size={14} /> {article.author || "Unknown Author"}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Calendar size={14} />{" "}
+                          {article.createdAt
+                            ? new Date(article.createdAt).toDateString()
+                            : "Unknown Date"}
+                        </span>
+                      </div>
 
-                    <p
-                      className={`text-stone-300 mb-4 ${
-                        expanded[article._id] ? "" : "line-clamp-3"
-                      }`}
-                      dangerouslySetInnerHTML={{ __html: article.content }}
-                    ></p>
+                      <p
+                        ref={(el) => (contentRefs.current[article._id] = el)}
+                        className="text-stone-300 mb-4 transition-all duration-300"
+                        style={{
+                          display: "-webkit-box",
+                          WebkitLineClamp: !isExpanded ? 3 : "unset",
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                        }}
+                        dangerouslySetInnerHTML={{ __html: article.content || "" }}
+                      ></p>
 
-                    <p className="text-blue-400 hover:text-blue-300 font-medium">
-                      {expanded[article._id] ? "Show Less" : "Read More"}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+                      {showToggle[article._id] && (
+                        <p
+                          className="text-blue-400 hover:text-blue-300 font-medium cursor-pointer"
+                          onClick={() => toggleExpand(article._id)}
+                        >
+                          {isExpanded ? "Show Less" : "Read More"}
+                        </p>
+                      )}
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           )}
-        </div>
-      </section>
-
-      {/* Blog Disclaimer */}
-      <section className="py-12 px-4 bg-gradient-to-r from-stone-900/20 to-gray-900/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-stone-900/20 to-gray-900/20 rounded-lg p-6">
-            <h5 className="text-sm font-bold text-stone-400 mb-2">
-              CONTENT DISCLAIMER
-            </h5>
-            <p className="text-sm text-gray-300 italic leading-relaxed">
-              The content shared is purely for contemplative and educational
-              purposes. They are not intended as direct medical advice,
-              inductions, neuro-programming, or installation tools.
-            </p>
-          </div>
         </div>
       </section>
     </div>
