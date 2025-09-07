@@ -54,9 +54,9 @@ export default function Navigation(): JSX.Element {
           </div>
 
           {/* Center Logo */}
-          <div className="absolute left-1/2 -translate-x-1/2 transform z-20">
-            <div className="hover:scale-105 transition-transform duration-300">
-              <BrandLogo />
+          <div className="absolute left-1/2 -translate-x-1/2 transform z-20 h-12">
+            <div className="h-full flex items-center">
+              <BrandLogo className="h-full w-auto object-contain" />
             </div>
           </div>
 
@@ -95,7 +95,11 @@ export default function Navigation(): JSX.Element {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-stone-400 hover:bg-stone-500/10 transition-all duration-300 h-10 w-10"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>

@@ -21,10 +21,10 @@ const api = {
   createArticle: async (data: FormData) => {
     try {
       const token = localStorage.getItem("auth_token");
-      const res = await fetch("http://localhost:5001/api/articles", {
+      const res = await fetch("http://localhost:5001/api/admin/articles", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${token}`, // FormData => do NOT set Content-Type
+          Authorization: `Bearer ${token}`,
         },
         body: data,
       });
@@ -42,11 +42,16 @@ const api = {
     try {
       const res = await fetch("http://localhost:5001/api/articles");
       const data = await res.json();
-      if (!res.ok || !data.success) throw new Error(data.message || "Failed to fetch articles");
+      if (!res.ok || !data.success)
+        throw new Error(data.message || "Failed to fetch articles");
       return { success: true, data: { articles: data.articles || [] } };
     } catch (err) {
       console.error("API fetch articles error:", err);
-      return { success: false, message: (err as Error).message, data: { articles: [] } };
+      return {
+        success: false,
+        message: (err as Error).message,
+        data: { articles: [] },
+      };
     }
   },
 
@@ -55,7 +60,8 @@ const api = {
     try {
       const res = await fetch(`http://localhost:5001/api/articles/${id}`);
       const data: SingleArticleResponse = await res.json();
-      if (!res.ok || !data.article) throw new Error((data as any).message || "Failed to fetch article");
+      if (!res.ok || !data.article)
+        throw new Error((data as any).message || "Failed to fetch article");
       return { success: true, data };
     } catch (err) {
       console.error("API fetch article error:", err);

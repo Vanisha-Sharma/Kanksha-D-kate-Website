@@ -48,7 +48,7 @@ export default function AboutPage() {
               <div className="lg:w-1/3">
                 <div className="relative">
                   <div className="w-full h-80 bg-gradient-to-br from-stone-600 to-stone-700 rounded-2xl overflow-hidden border border-stone-500/30">
-                    <div className="w-full max-w-md mx-auto mt-8 md:text-left text-center">
+                    <div className="w-full max-w-md mx-auto md:text-left text-center">
                       <img
                         src="/images/logo1.png"
                         alt="Kanksha Dhakate - Professional Portrait"
@@ -159,11 +159,11 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-lg leading-relaxed text-gray-200 mb-8 text-justify">
-              We are entering a new era, which does not belong to Artificial Intelligence alone
-              but also AUGMENTED HUMANITY.
-              As the world witnesses AI rewrite industries and render roles
-              obsolete, the greatest competitive advantage now is not just knowledge or ability
-              to use artificial intelligence but an integrated, SUPER
+              We are entering a new era, which does not belong to Artificial
+              Intelligence alone but also AUGMENTED HUMANITY. As the world
+              witnesses AI rewrite industries and render roles obsolete, the
+              greatest competitive advantage now is not just knowledge or
+              ability to use artificial intelligence but an integrated, SUPER
               INTELLIGENCE which is driven by an evolved internal world. It's
               the kind of intelligence that emerges through inner calibration at
               the deeper levels of the{" "}
@@ -236,7 +236,7 @@ export default function AboutPage() {
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-stone-400 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold text-white">CXOs</h4>
+                      <h4 className="text-lg font-semibold text-white">CEO/CXOs</h4>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -369,23 +369,24 @@ export default function AboutPage() {
             </div>
 
             <section className="py-12 px-4 bg-gradient-to-r from-stone-900/20 to-gray-900/20">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="bg-gradient-to-r from-stone-900/20 to-gray-900/20 rounded-lg p-6">
-                <h5 className="text-sm font-bold text-stone-400 mb-2">
-                  DISCLAIMER
-                </h5>
+              <div className="max-w-4xl mx-auto text-center">
+                <div className="bg-gradient-to-r from-stone-900/20 to-gray-900/20 rounded-lg p-6">
+                  <h5 className="text-sm font-bold text-stone-400 mb-2">
+                    DISCLAIMER
+                  </h5>
 
-                <p className="text-sm text-gray-300 italic leading-relaxed mt-6 max-w-2xl mx-auto text-center">
-                  This work is not clinical neuroscience, laboratory
-                  neuroscience or medical practice. Our methodology represents a
-                  synthesis of scientific principles inspired by neuroscience,
-                  psychology, linguistics, and installation technologies,
-                  applied exclusively for the purpose of personal growth,
-                  transformation, and holistic life evolution.
-                </p>
+                  <p className="text-sm text-gray-300 italic leading-relaxed mt-6 max-w-2xl mx-auto text-center">
+                    This work is not clinical neuroscience, laboratory
+                    neuroscience or medical practice. Our methodology represents
+                    a synthesis of scientific principles inspired by
+                    neuroscience, psychology, linguistics, and installation
+                    technologies, applied exclusively for the purpose of
+                    personal growth, transformation, and holistic life
+                    evolution.
+                  </p>
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
 
             {/* CTA */}
             <div className="text-center mt-16 px-4 py-8 glass-dark rounded-lg border border-stone-500/20">
