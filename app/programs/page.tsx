@@ -78,7 +78,7 @@ const WhatsAppButtonImmersion = () => {
       onClick={handleClick}
     >
       <MessageCircle className="w-4 h-4 mr-2" />
-      Clarity chat over WhatsApp
+      Start a Conversation
     </button>
   );
 };
@@ -105,7 +105,7 @@ const WhatsAppButtonStream = () => {
       onClick={handleClick}
     >
       <MessageCircle className="w-4 h-4 mr-2" />
-      Clarity chat over WhatsApp
+      Start a Conversation
     </button>
   );
 };
@@ -690,7 +690,7 @@ export default function ServicesPage() {
               <div className="max-w-6xl mx-auto mb-16">
                 <div className="bg-gradient-to-br from-stone-900/40 to-gray-900/40 rounded-2xl p-8 border border-stone-500/20 backdrop-blur-sm">
                   <h4 className="text-3xl font-bold text-white mb-12 text-center">
-                    Your Journey Options
+                    Growth Pathways
                   </h4>
 
                   {/* Responsive Grid: single column on mobile, two columns on lg */}
@@ -780,118 +780,107 @@ export default function ServicesPage() {
 
           {/* Clean Comparison Table */}
           <div className="max-w-6xl mx-auto mt-20 px-4">
-            <div className="bg-gradient-to-br from-stone-900/40 to-gray-900/40 rounded-3xl p-8 border border-stone-500/20 backdrop-blur-sm">
-              <h3 className="text-3xl font-bold text-center mb-12 text-white flex flex-col items-center">
-                Select your Plan
-                <span className="text-sm text-gray-300 mt-2 md:hidden">
-                  (Compare plans)
-                </span>
-              </h3>
+  <div className="bg-gradient-to-br from-stone-900/40 to-gray-900/40 rounded-3xl p-8 border border-stone-500/20 backdrop-blur-sm">
+    <h3 className="text-3xl font-bold text-center mb-12 text-white flex flex-col items-center">
+      Select your Plan
+      <span className="text-sm text-gray-300 mt-2 md:hidden">
+        (Compare plans)
+      </span>
+    </h3>
 
-              {/* Desktop Table */}
-              <div className="hidden md:block">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="border-b border-stone-500/30">
-                      <th className="text-left py-3 px-6 text-lg sm:text-xl text-gray-300 font-semibold">
-                        Feature
-                      </th>
-                      <th className="text-center py-3 px-6 text-lg sm:text-xl text-stone-400 font-semibold">
-                        Signature Immersion
-                      </th>
-                      <th className="text-center py-3 px-6 text-lg sm:text-xl text-gray-400 font-semibold">
-                        Stream
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      ["Duration", "14 Months", "3 Months"],
-                      [
-                        "Installation Cycles",
-                        "3 Advanced Cycles",
-                        "Custom procedures tailored to your needs",
-                      ],
-                      [
-                        "Personal Diagnostics",
-                        "Multi-dimensional",
-                        "Uni-dimensional",
-                      ],
-                      [
-                        "Additional Aid",
-                        "Complementary for one immediate family member",
-                        "2 Months post programs",
-                      ],
-                      ["Exclusive Events", "Included*", "Not Included"],
-                    ].map(([feature, immersion, stream], index) => (
-                      <tr
-                        key={index}
-                        className="border-b border-stone-500/10 hover:bg-stone-500/5 transition-colors"
-                      >
-                        <td className="py-2 px-6 text-gray-300 font-medium">
-                          {feature}
-                        </td>
-                        <td className="py-2 px-6 text-center text-stone-300">
-                          {immersion}
-                        </td>
-                        <td className="py-2 px-6 text-center text-gray-300">
-                          {stream}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+    {/* Desktop Table */}
+    <div className="hidden md:block">
+      <table className="w-full border-collapse text-center">
+        <thead>
+          <tr className="border-b border-stone-500/30">
+            <th className="py-3 px-6 text-lg sm:text-xl text-gray-300 font-semibold text-center w-1/3">
+              Feature
+            </th>
+            <th className="py-3 px-6 text-lg sm:text-xl text-stone-400 font-semibold text-center w-1/3">
+              Signature Immersion
+            </th>
+            <th className="py-3 px-6 text-lg sm:text-xl text-gray-400 font-semibold text-center w-1/3">
+              Stream
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ["Duration", "14 Months", "3 Months"],
+            [
+              "Installation Cycles",
+              "3 Advanced Cycles",
+              "Custom procedures tailored to your needs",
+            ],
+            ["Personal Diagnostics", "Multi-dimensional", "Uni-dimensional"],
+            [
+              "Additional Aid",
+              "Complementary for one immediate family member",
+              "2 Months post programs",
+            ],
+            ["Exclusive Events", "Included*", "Not Included"],
+          ].map(([feature, immersion, stream], index) => (
+            <tr
+              key={index}
+              className="border-b border-stone-500/10 hover:bg-stone-500/5 transition-colors"
+            >
+              <td className="py-2 px-6 text-gray-300 font-medium text-center w-1/3">
+                {feature}
+              </td>
+              <td className="py-2 px-6 text-stone-300 text-center w-1/3">
+                {immersion}
+              </td>
+              <td className="py-2 px-6 text-gray-300 text-center w-1/3">
+                {stream}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
 
-              {/* Mobile Vertical Cards */}
-              <div className="md:hidden flex flex-col gap-4">
-                {[
-                  ["Duration", "14 Months", "3 Months"],
-                  [
-                    "Installation Cycles",
-                    "3 Advanced Cycles",
-                    "Custom procedures tailored to your needs",
-                  ],
-                  [
-                    "Personal Diagnostics",
-                    "Multi-dimensional",
-                    "Uni-dimensional",
-                  ],
-                  [
-                    "Additional Aid",
-                    "Complementary for one immediate family member",
-                    "2 Months post programs",
-                  ],
-                  ["Exclusive Events", "Included*", "Not Included"],
-                ].map(([feature, immersion, stream], index) => (
-                  <div
-                    key={index}
-                    className="bg-stone-800/50 rounded-xl p-4 border border-stone-500/20"
-                  >
-                    <p className="text-gray-300 font-medium mb-2">{feature}</p>
-                    <p className="text-stone-300 mb-1">
-                      <span className="font-semibold">
-                        Signature Immersion:{" "}
-                      </span>
-                      {immersion}
-                    </p>
-                    <p className="text-gray-300">
-                      <span className="font-semibold">Stream: </span>
-                      {stream}
-                    </p>
-                  </div>
-                ))}
-              </div>
+    {/* Mobile Vertical Cards */}
+    <div className="md:hidden flex flex-col gap-4">
+      {[
+        ["Duration", "14 Months", "3 Months"],
+        [
+          "Installation Cycles",
+          "3 Advanced Cycles",
+          "Custom procedures tailored to your needs",
+        ],
+        ["Personal Diagnostics", "Multi-dimensional", "Uni-dimensional"],
+        [
+          "Additional Aid",
+          "Complementary for one immediate family member",
+          "2 Months post programs",
+        ],
+        ["Exclusive Events", "Included*", "Not Included"],
+      ].map(([feature, immersion, stream], index) => (
+        <div
+          key={index}
+          className="bg-stone-800/50 rounded-xl p-4 border border-stone-500/20 text-center"
+        >
+          <p className="text-gray-300 font-medium mb-2">{feature}</p>
+          <p className="text-stone-300 mb-1">
+            <span className="font-semibold">Signature Immersion: </span>
+            {immersion}
+          </p>
+          <p className="text-gray-300">
+            <span className="font-semibold">Stream: </span>
+            {stream}
+          </p>
+        </div>
+      ))}
+    </div>
 
-              {/* Footnote */}
-              <div className="mt-6 text-center">
-                <p className="text-sm text-gray-400">
-                  *For registrations before November 2025. Terms & Conditions
-                  apply.
-                </p>
-              </div>
-            </div>
-          </div>
+    {/* Footnote */}
+    <div className="mt-6 text-center">
+      <p className="text-sm text-gray-400">
+        *For registrations before November 2025. Terms & Conditions apply.
+      </p>
+    </div>
+  </div>
+</div>
         </div>
       </section>
 

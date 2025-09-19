@@ -401,7 +401,7 @@ export default function FeedbackPage() {
                                   );
                                 }}
                               >
-                                {isExpanded ? "Show less" : "Read full story"}
+                                {isExpanded ? "Show less" : "Read more"}
                               </button>
                             </div>
                           )}

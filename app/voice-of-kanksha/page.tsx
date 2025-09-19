@@ -323,7 +323,7 @@ export default function VoiceOfKankshaPage() {
             {/* The Pivotal Question - Paragraph Format */}
             <div className="max-w-4xl mx-auto mb-16">
               <p className="text-base text-gray-700 leading-relaxed mb-6 text-justify">
-                I remember listening to a renowned priest speak about how God,
+                One day, I remember listening to a renowned priest speak about how God,
                 nature and human beings all originate from the same divine
                 source. As he spoke, a question arose within me and the 13-year
                 old me couldn't help but ask him, not in the exact same words
@@ -471,18 +471,18 @@ export default function VoiceOfKankshaPage() {
                   <p>
                     Prima facie, when I quit my corporate job at Ernst & Young,
                     it seemed like I stepped away from the world of logic and
-                    leadership. I didn't. I expanded it. People didn't need
-                    something as shallow as advice, they needed something far
-                    deeper. Something that could transform the{" "}
+                    leadership. I actually didn't. I wanted to expand it.
+                    Because I realized people didn't need something as shallow
+                    as advice, they needed something far deeper. Something that
+                    could transform the{" "}
                     <span style={{ textDecoration: "underline" }}>
                       root cause
                     </span>{" "}
                     of their behaviors and bring true change, and it felt
-                    like... I was capable of offering that to them.
+                    like... I was capable of offering that to them.
                   </p>
                   <p>
-                    There was another pattern I kept encountering across
-                    ecosystems which was,
+                    Because, really,
                   </p>
 
                   <div className="bg-gray-100 border-l-4 border-gray-600 p-6 rounded-r my-6">

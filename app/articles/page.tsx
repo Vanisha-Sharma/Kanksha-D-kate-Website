@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, User } from "lucide-react";
 import api from "@/lib/api";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface Article {
   _id: string;
@@ -18,6 +18,8 @@ interface Article {
 export default function BlogsPage() {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const router = useRouter();
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -45,13 +47,15 @@ export default function BlogsPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-20 px-4 bg-gradient-to-br from-stone-900 via-gray-900 to-black">
-        <div className="relative z-10 w-full max-w-3xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-stone-300 via-gray-300 to-stone-200 bg-clip-text text-transparent">
+      <section className="relative py-16 sm:py-20 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-stone-900 via-gray-900 to-black overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/transformation-events.jpg?height=800&width=1920')] bg-cover bg-center opacity-20"></div>
+        <div className="relative z-10 w-full max-w-3xl mx-auto text-center px-2 sm:px-4">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl mb-6 sm:mb-8 bg-gradient-to-r from-stone-300 via-gray-300 to-stone-200 bg-clip-text text-transparent leading-tight tracking-tight break-words">
             THE LOTUS LIFE
           </h1>
-          <p className="text-lg text-gray-300">
-            Insights to nourish your mind, life and potential
+          <p className="text-sm sm:text-base md:text-xl text-gray-300 leading-relaxed max-w-xl mx-auto px-2 sm:px-0 break-words">
+            Insights to nourish your mind, life and potential <br />
+            micro-evolution, straight from Kanksha&apos;s journal
           </p>
         </div>
       </section>
@@ -62,12 +66,7 @@ export default function BlogsPage() {
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-stone-400 to-gray-400 bg-clip-text text-transparent">
             Latest Articles
           </h2>
-
-          {loading ? (
-            <p className="text-center text-gray-400">Loading...</p>
-          ) : articles.length === 0 ? (
             <p className="text-center text-gray-400">Coming Soon...</p>
-          ) : (
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {articles.map((article) => (
                 <Card
@@ -106,17 +105,16 @@ export default function BlogsPage() {
                       }}
                     />
 
-                    <Link
-                      href={`/articles/${article._id}`}
+                    <button
+                      onClick={() => router.push(`/articles/${article._id}`)}
                       className="text-blue-400 hover:text-blue-300 font-medium"
                     >
                       Read More →
-                    </Link>
+                    </button>
                   </CardContent>
                 </Card>
               ))}
             </div>
-          )}
         </div>
       </section>
     </div>

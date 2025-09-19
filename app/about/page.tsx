@@ -39,7 +39,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           {/* Kanksha D'Kate Section */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-white mb-8 text-shimmer">
+            <h2 className="text-3xl font-bold text-white mb-8 text-shimmer text-center md:text-left">
               KANKSHA D'KATE
             </h2>
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
               <div className="lg:w-1/3">
                 <div className="relative">
                   <div className="w-full h-80 bg-gradient-to-br from-stone-600 to-stone-700 rounded-2xl overflow-hidden border border-stone-500/30">
-                    <div className="w-full max-w-md mx-auto md:text-left text-center">
+                    <div className="w-full max-w-md mx-auto mt-8 md:text-left text-center">
                       <img
                         src="/images/logo1.png"
                         alt="Kanksha Dhakate - Professional Portrait"
@@ -89,15 +89,16 @@ export default function AboutPage() {
                   <p className="text-lg leading-relaxed text-gray-300 mb-6 text-justify">
                     We have an ecologically integrative approach. Our customized
                     processes are grounded in proven principles of
-                    neuroplasticity, cognitive adaptation, emotional regulation,
-                    contextual intelligence, systemic thinking, unconscious
-                    processing and beyond. We enable transformation at both
-                    conscious and unconscious levels by working at the
-                    intersection of neuroscience and advanced neuro-linguistic
-                    installation technologies. This unique synthesis bridges
-                    scientific understanding with practical life enabling us to
-                    create lasting, timeless evolution in our clients while also
-                    taking the legacy of the genius creators forward.
+                    Neuroplasticity, Neurosynchronicity, cognitive adaptation,
+                    emotional regulation, contextual intelligence, systemic
+                    thinking, unconscious processing and beyond. We enable
+                    transformation at both conscious and unconscious levels by
+                    working at the intersection of neuroscience and advanced
+                    neuro-linguistic installation technologies. This unique
+                    synthesis bridges scientific understanding with practical
+                    life enabling us to create lasting, timeless evolution in
+                    our clients while also taking the legacy of the genius
+                    creators forward.
                   </p>
                 </div>
               </div>
@@ -114,12 +115,9 @@ export default function AboutPage() {
                 trajectories, her mastery is further cultivated through
                 signature programs and practices alongside formal
                 certifications. Formally accredited by the originators
-                themselves,{" "}
-                <span style={{ fontStyle: "italic" }}>
-                  Kanksha is also an NLP Practitioner, taught and Certified by
-                  the Co-creator Dr. John Grinder, along with his eminent
-                  partner Carmen Bostic St Clair.
-                </span>
+                themselves, Kanksha is also an NLP Practitioner, taught and
+                Certified directly by the Co-creator Dr. John Grinder, along
+                with his eminent partner Carmen Bostic St Clair.
               </p>
 
               <p className="text-lg leading-relaxed text-gray-300 mb-8 text-justify">
@@ -236,7 +234,9 @@ export default function AboutPage() {
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-stone-400 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold text-white">CEO/CXOs</h4>
+                      <h4 className="text-lg font-semibold text-white">
+                        CEO/CXOs
+                      </h4>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
